@@ -4,11 +4,13 @@ import SingleSelectedTechnology from "./../SignleSelectedTechnology/SingleSelect
 interface SelectedContainerProps {
   selected: Technology[];
   handleDeleteTechnology: (technology: Technology) => void;
+  handleRemoveAll: () => void;
 }
 
 const SelectedContainer = ({
   selected,
   handleDeleteTechnology,
+  handleRemoveAll,
 }: SelectedContainerProps) => {
   return (
     <div className="border-2 border-gray-200 p-4 rounded-xl">
@@ -28,7 +30,10 @@ const SelectedContainer = ({
                 technology={tech}
               />
             ))}
-            <button className="text-red-700 py-2 mt-7 rounded-xl font-bold text-center w-full border-2 border-red-300 cursor-pointer hover:bg-red-700 hover:text-white duration-500 transition hover:border-red-700">
+            <button
+              onClick={handleRemoveAll}
+              className="text-red-700 py-2 mt-7 rounded-xl font-bold text-center w-full border-2 border-red-300 cursor-pointer hover:bg-red-700 hover:text-white duration-500 transition hover:border-red-700"
+            >
               Remove All
             </button>
           </div>

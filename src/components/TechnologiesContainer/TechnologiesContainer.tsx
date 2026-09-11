@@ -96,7 +96,12 @@ const TechnologiesContainer = ({
       transition: Bounce,
     });
   };
-  console.log(selected);
+  const handleRemoveAll = () => {
+    // remove all selected items
+    setSelected([]);
+    // set isSelected items
+    setTechnologies(technologiesData);
+  };
   return (
     <section className="border-2 mb-20">
       <div className=" technologies_container">
@@ -121,6 +126,7 @@ const TechnologiesContainer = ({
           <SelectedContainer
             selected={selected}
             handleDeleteTechnology={handleDeleteTechnology}
+            handleRemoveAll={handleRemoveAll}
           />
         </div>
       </div>

@@ -12,12 +12,14 @@ const SingleSelectedTechnology = ({ technology }: SingleSelectedTechnology) => {
       <div className="flex items-center gap-3">
         <img className="h-9 w-9" src={technology.icon} alt="" />
         <div>
-          <h3>{technology.name}</h3>
-          <p>{technology.category}</p>
+          <h3 className="text-lg font-bold">{technology.name}</h3>
+          <p className="font-bold text-[12px] text-gray-400">
+            {technology.category}
+          </p>
         </div>
       </div>
       <RxCross2
-        size={35}
+        size={28}
         className="text-gray-400 hover:text-red-500 cursor-pointer"
       />
     </div>

@@ -20,7 +20,7 @@ const SelectedContainer = ({ selected }: SelectedContainerProps) => {
             {selected.map((tech) => (
               <SingleSelectedTechnology key={tech.id} technology={tech} />
             ))}
-            <button className="text-red-700 py-2 mt-7 rounded-xl font-bold text-center w-full border-2 border-red-300 cursor-pointer">
+            <button className="text-red-700 py-2 mt-7 rounded-xl font-bold text-center w-full border-2 border-red-300 cursor-pointer hover:bg-red-700 hover:text-white duration-500 transition hover:border-red-700">
               Remove All
             </button>
           </div>

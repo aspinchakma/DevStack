@@ -127,14 +127,14 @@ const TechnologiesContainer = ({
           Pick one technology per category to build your ideal stack.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-5">
-        <div className="lg:col-span-9 md:col-span-9">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5">
+        <div className="lg:col-span-9">
           <Technologies
             technologies={technologies}
             handleAddSelectedTechnology={handleAddSelectedTechnology}
           />
         </div>
-        <div className="lg:col-span-3 md:col-span-3">
+        <div className="lg:col-span-3">
           <SelectedContainer
             selected={selected}
             handleDeleteTechnology={handleDeleteTechnology}

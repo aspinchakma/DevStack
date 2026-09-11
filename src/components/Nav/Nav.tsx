@@ -7,7 +7,7 @@ const Nav = () => {
       <FaBars className="lg:hidden md:hidden" size={30} />
       <img src={navLogo} alt="" />
       <div className="hidden lg:block md:block">
-        <ul className="flex items-center text-[#475569] font-medium gap-7 ">
+        <ul className="flex md:text-[14px] items-center text-[#475569] font-medium md:gap-4 lg:gap-7 ">
           <li>
             <a href="#">Home</a>
           </li>

@@ -5,8 +5,8 @@ const Footer = () => {
   const year = date.getFullYear();
   return (
     <footer className="py-12 border-t-2 border-t-gray-100 w-[95%] lg:w-[89%] mx-auto">
-      <div className="grid grid-cols-1 gap-2 md:gap-10 lg:gap-10 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+      <div className="grid grid-cols-1 gap-2 md:gap-10 lg:gap-10 lg:grid-cols-5 md:grid-cols-12">
+        <div className="lg:col-span-2 md:col-span-12 md:mb-8">
           <img className="mx-auto lg:mx-0" src={footerLogo} alt="" />
           <p className="text-[16px] text-[#64748B] text-center lg:text-left my-4">
             Curated tools, technologies, and resources for developers building{" "}
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden lg:block md:block">
+        <div className="hidden lg:block md:block md:col-span-4 ">
           <h3 className="font-bold text-[15px] ">PRODUCT</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>
@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:block lg:block">
+        <div className="hidden md:block lg:block md:col-span-4">
           <h3 className="font-bold text-[15px]">COMPANY</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>
@@ -67,7 +67,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:block lg:block">
+        <div className="hidden md:block lg:block md:col-span-4">
           <h3 className="font-bold text-[15px]">LEGAL</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>

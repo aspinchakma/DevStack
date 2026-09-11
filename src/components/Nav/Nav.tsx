@@ -3,7 +3,7 @@ import navLogo from "../../assets/logo-text.png";
 
 const Nav = () => {
   return (
-    <header className="flex items-center justify-between py-4 border">
+    <header className="flex items-center justify-between py-4">
       <FaBars className="lg:hidden md:hidden" size={30} />
       <img src={navLogo} alt="" />
       <div className="hidden lg:block md:block">

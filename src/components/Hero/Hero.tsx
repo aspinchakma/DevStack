@@ -14,7 +14,7 @@ const Hero = () => {
           Explore frontend, backend, database, and tooling options, compare them
           side by side, and put together the stack that fits your next project.
         </p>
-        <div className="flex items-center gap-2 justify-center lg:justify-start">
+        <div className="flex items-center gap-2 justify-center lg:justify-start text-[12px] lg:text-[15px] md:text-[15px]">
           <button className="text-white font-semibold px-4 py-3 rounded-md bg-linear-to-r from-[#F97316] to-[#EC4899] cursor-pointer">
             Explore Technologies
           </button>

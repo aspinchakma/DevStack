@@ -101,6 +101,18 @@ const TechnologiesContainer = ({
     setSelected([]);
     // set isSelected items
     setTechnologies(technologiesData);
+    // remove all successfully message show
+    toast.success(`Successfully Deleted All`, {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
   return (
     <section className="mb-20">

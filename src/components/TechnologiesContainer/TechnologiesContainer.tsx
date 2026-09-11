@@ -103,7 +103,7 @@ const TechnologiesContainer = ({
     setTechnologies(technologiesData);
   };
   return (
-    <section className="border-2 mb-20">
+    <section className="mb-20">
       <div className=" technologies_container">
         <h2 className="text-4xl text-center lg:text-left font-extrabold">
           Explore the{" "}

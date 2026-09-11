@@ -1,3 +1,4 @@
+import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Nav from "../components/Nav/Nav";
 
@@ -8,7 +9,7 @@ const Home = () => {
       <main className="flex-1">
         <Hero />
       </main>
-      <h3>This is Footer</h3>
+      <Footer />
     </div>
   );
 };

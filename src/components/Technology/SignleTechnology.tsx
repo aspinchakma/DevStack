@@ -19,7 +19,6 @@ const SignleTechnology = ({
 
   const color = randomColor();
 
-  let hello = true;
   return (
     <div
       className={`border-2 p-4  rounded-xl flex flex-col ${technology.isSelected ? "border-red-500 " : "border-gray-200"}`}

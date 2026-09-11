@@ -79,7 +79,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="h-[3px] bg-[#f1f5f9] my-6"></div>
+      <div className="h-0.5 bg-[#f1f5f9] my-6"></div>
       <div className="text-[#94A3B8] flex items-center justify-between">
         <p>&copy; {year} Dev Stack. All rights reserved.</p>
         <div className="flex items-center gap-5">

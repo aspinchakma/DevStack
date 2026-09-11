@@ -87,7 +87,7 @@ const TechnologiesContainer = ({
           />
         </div>
         <div className="lg:col-span-3 md:col-span-3">
-          <SelectedContainer />
+          <SelectedContainer selected={selected} />
         </div>
       </div>
     </section>

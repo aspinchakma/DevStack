@@ -13,11 +13,11 @@ const Hero = () => {
           side by side, and put together the stack that fits your next project.
         </p>
         <div className="flex items-center gap-2 justify-center lg:justify-start">
-          <button className="text-white font-semibold px-4 py-3 rounded-md bg-linear-to-r from-[#F97316] to-[#EC4899]">
+          <button className="text-white font-semibold px-4 py-3 rounded-md bg-linear-to-r from-[#F97316] to-[#EC4899] cursor-pointer">
             Explore Technologies
           </button>
 
-          <button className="px-12 py-[10px] border-2 border-[#e5e7eb] rounded-md">
+          <button className="px-12 py-[10px] border-2 border-[#e5e7eb] rounded-md cursor-pointer">
             Learn More
           </button>
         </div>

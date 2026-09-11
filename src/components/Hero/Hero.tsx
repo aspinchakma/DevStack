@@ -2,10 +2,12 @@ import bannerImg from "../../assets/banner-stack.png";
 import "./Hero.css";
 const Hero = () => {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-8">
+    <section className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-8 mt-10 lg:mt-0 md:mt-0">
       <div className="banner_title_container">
-        <h1 className="text-6xl font-extrabold">Build Your Ideal</h1>
-        <h1 className="text-6xl font-extrabold bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent mt-2">
+        <h1 className="text-3xl text-center lg:text-left md:text-left lg:text-6xl font-extrabold">
+          Build Your Ideal
+        </h1>
+        <h1 className="text-3xl text-center lg:text-left md:text-left lg:text-6xl font-extrabold bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent mt-2">
           Development Stack
         </h1>
         <p className="mt-5 mb-7 leading-8 text-[#475569]">

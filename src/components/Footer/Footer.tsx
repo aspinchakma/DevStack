@@ -4,7 +4,7 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <footer className="py-12">
+    <footer className="py-12 border-t-2 border-t-gray-100 w-[95%] lg:w-[89%] mx-auto">
       <div className="grid grid-cols-1 gap-2 md:gap-10 lg:gap-10 lg:grid-cols-5">
         <div className="lg:col-span-2">
           <img className="mx-auto lg:mx-0" src={footerLogo} alt="" />
@@ -39,8 +39,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div>
-          <h3 className="font-bold text-[15px]">PRODUCT</h3>
+        <div className="hidden lg:block md:block">
+          <h3 className="font-bold text-[15px] ">PRODUCT</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>
               <a href="#">Home</a>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="h-0.5 bg-[#f1f5f9] my-6"></div>
-      <div className="text-[#94A3B8] flex items-center justify-between">
+      <div className="text-[#94A3B8] flex items-center justify-between text-[13px] lg:text-[16px] md:text-[16px]">
         <p>&copy; {year} Dev Stack. All rights reserved.</p>
         <div className="flex items-center gap-5">
           <a href="#">Privacy</a>

@@ -17,10 +17,12 @@ const Home = () => {
   };
 
   return (
-    <div className="w-[95%] lg:w-[89%] mx-auto  flex flex-col min-h-screen">
+    <div className="  flex flex-col min-h-screen relative">
       <ToastContainer />
-      <Nav />
-      <main className="flex-1">
+      <div className="w-[95%] lg:w-[89%] mx-auto sticky top-0 bg-white z-10">
+        <Nav />
+      </div>
+      <main className="flex-1 w-[95%] lg:w-[89%] mx-auto">
         <Hero />
         <Suspense fallback={<Loader />}>
           <TechnologiesContainer technologyResponse={responseData()} />

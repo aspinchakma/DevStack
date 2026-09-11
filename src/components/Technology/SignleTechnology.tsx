@@ -26,7 +26,7 @@ const SignleTechnology = ({
       <div className="relative">
         <img className="w-14 h-14" src={technology.icon} alt="" />
         <h2
-          className={` text-black font-semibold text-[12px]  absolute top-0 right-0 border} px-3 py-1 rounded-md`}
+          className={` text-black font-extrabold text-[12px]  absolute top-0 right-0 border px-3 py-1 rounded-md `}
           style={{
             color: color,
             backgroundColor: `${color}20 `,

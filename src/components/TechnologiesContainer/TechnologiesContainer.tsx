@@ -105,13 +105,13 @@ const TechnologiesContainer = ({
   return (
     <section className="mb-20">
       <div className=" technologies_container">
-        <h2 className="text-4xl text-center lg:text-left font-extrabold">
+        <h2 className="text-3xl lg:text-4xl text-center lg:text-left font-extrabold ">
           Explore the{" "}
           <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
             Technologies
           </span>
         </h2>
-        <p className="text-[#64748B] text-center lg:text-left mt-2 mb-8 text-[18px]">
+        <p className="text-[#64748B] text-center lg:text-left mt-2 mb-8 text-[14px] lg:text-[18px]">
           Pick one technology per category to build your ideal stack.
         </p>
       </div>

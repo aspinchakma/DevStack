@@ -10,7 +10,6 @@ const SingleSelectedTechnology = ({
   technology,
   handleDeleteTechnology,
 }: SingleSelectedTechnology) => {
-  console.log(technology);
   return (
     <div className="flex items-center justify-between border-2 p-4 rounded-xl border-gray-100">
       <div className="flex items-center gap-3">

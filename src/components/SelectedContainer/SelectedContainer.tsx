@@ -3,9 +3,13 @@ import SingleSelectedTechnology from "./../SignleSelectedTechnology/SingleSelect
 
 interface SelectedContainerProps {
   selected: Technology[];
+  handleDeleteTechnology: (technology: Technology) => void;
 }
 
-const SelectedContainer = ({ selected }: SelectedContainerProps) => {
+const SelectedContainer = ({
+  selected,
+  handleDeleteTechnology,
+}: SelectedContainerProps) => {
   return (
     <div className="border-2 border-gray-200 p-4 rounded-xl">
       <h2 className="text-2xl font-bold">Your Stack</h2>
@@ -18,7 +22,11 @@ const SelectedContainer = ({ selected }: SelectedContainerProps) => {
         {selected.length ? (
           <div className="grid grid-cols-1 gap-3">
             {selected.map((tech) => (
-              <SingleSelectedTechnology key={tech.id} technology={tech} />
+              <SingleSelectedTechnology
+                handleDeleteTechnology={handleDeleteTechnology}
+                key={tech.id}
+                technology={tech}
+              />
             ))}
             <button className="text-red-700 py-2 mt-7 rounded-xl font-bold text-center w-full border-2 border-red-300 cursor-pointer hover:bg-red-700 hover:text-white duration-500 transition hover:border-red-700">
               Remove All

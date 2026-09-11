@@ -65,6 +65,37 @@ const TechnologiesContainer = ({
       });
     }
   };
+
+  // handle delete technology each
+  const handleDeleteTechnology = (technology: Technology): void => {
+    // delete from selected technology
+    const result = selected.filter((tech) => tech.id !== technology.id);
+    setSelected(result);
+    // update property then update technologies
+    const finalTechnologies = technologies.map((tech) => {
+      if (tech.id === technology.id) {
+        return {
+          ...tech,
+          isSelected: false,
+        };
+      }
+      return tech;
+    });
+    setTechnologies(finalTechnologies);
+
+    // show message
+    toast.success(`Successfully Deleted ${technology.name}`, {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
+  };
   console.log(selected);
   return (
     <section className="border-2 mb-20">
@@ -87,7 +118,10 @@ const TechnologiesContainer = ({
           />
         </div>
         <div className="lg:col-span-3 md:col-span-3">
-          <SelectedContainer selected={selected} />
+          <SelectedContainer
+            selected={selected}
+            handleDeleteTechnology={handleDeleteTechnology}
+          />
         </div>
       </div>
     </section>

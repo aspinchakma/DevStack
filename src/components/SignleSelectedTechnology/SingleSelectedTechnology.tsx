@@ -3,9 +3,13 @@ import type { Technology } from "../type/type";
 
 interface SingleSelectedTechnology {
   technology: Technology;
+  handleDeleteTechnology: (technology: Technology) => void;
 }
 
-const SingleSelectedTechnology = ({ technology }: SingleSelectedTechnology) => {
+const SingleSelectedTechnology = ({
+  technology,
+  handleDeleteTechnology,
+}: SingleSelectedTechnology) => {
   console.log(technology);
   return (
     <div className="flex items-center justify-between border-2 p-4 rounded-xl border-gray-100">
@@ -21,6 +25,7 @@ const SingleSelectedTechnology = ({ technology }: SingleSelectedTechnology) => {
       <RxCross2
         size={28}
         className="text-gray-400 hover:text-red-500 cursor-pointer"
+        onClick={() => handleDeleteTechnology(technology)}
       />
     </div>
   );

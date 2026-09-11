@@ -1,8 +1,16 @@
 import { FaStar } from "react-icons/fa";
+import { TiTick } from "react-icons/ti";
 import type { Technology } from "../type/type";
+import "./SingleTechnologies.css";
 
-const SignleTechnology = ({ technology }: { technology: Technology }) => {
-  console.log(technology);
+interface SingleTechnology {
+  technology: Technology;
+  handleAddSelectedTechnology: (technology: Technology) => void;
+}
+const SignleTechnology = ({
+  technology,
+  handleAddSelectedTechnology,
+}: SingleTechnology) => {
   const randomColor = () => {
     return `#${Math.floor(Math.random() * 16777215)
       .toString(16)
@@ -13,11 +21,13 @@ const SignleTechnology = ({ technology }: { technology: Technology }) => {
 
   let hello = true;
   return (
-    <div className="border-2 p-4 border-gray-200 rounded-xl flex flex-col">
+    <div
+      className={`border-2 p-4  rounded-xl flex flex-col ${technology.isSelected ? "border-red-500 " : "border-gray-200"}`}
+    >
       <div className="relative">
         <img className="w-14 h-14" src={technology.icon} alt="" />
         <h2
-          className={` text-black font-semibold text-[12px]  absolute top-0 right-0 border-1 } px-3 py-1 rounded-md`}
+          className={` text-black font-semibold text-[12px]  absolute top-0 right-0 border} px-3 py-1 rounded-md`}
           style={{
             color: color,
             backgroundColor: `${color}20 `,
@@ -42,9 +52,17 @@ const SignleTechnology = ({ technology }: { technology: Technology }) => {
       </div>
       <div className="mt-5">
         <button
-          className={`w-full py-2 rounded-xl ${hello ? "bg-gray-200 text-gray-500 border border-gray-300 cursor-not-allowed " : "bg-black text-white hover:bg-white hover:text-black border cursor-pointer"} transition duration-500  font-medium`}
+          onClick={() => handleAddSelectedTechnology(technology)}
+          className={`addButton border w-full py-2 rounded-xl transition duration-500  font-medium ${technology.isSelected ? "bg-red-100 text-red-600 cursor-not-allowed border-red-400 " : "bg-black text-white hover:bg-white hover:text-black border cursor-pointer"} `}
         >
-          Add to Stack
+          {technology.isSelected ? (
+            <span className="flex items-center justify-center gap-2">
+              <TiTick size={20} />
+              Added to Stack
+            </span>
+          ) : (
+            " Add to Stack"
+          )}
         </button>
       </div>
     </div>

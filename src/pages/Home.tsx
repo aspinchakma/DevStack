@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
 import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Loader from "../components/Loader/Loader";
@@ -17,6 +18,7 @@ const Home = () => {
 
   return (
     <div className="w-[95%] lg:w-[89%] mx-auto  flex flex-col min-h-screen">
+      <ToastContainer />
       <Nav />
       <main className="flex-1">
         <Hero />

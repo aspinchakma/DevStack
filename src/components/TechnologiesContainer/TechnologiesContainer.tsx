@@ -1,4 +1,5 @@
 import { use, useState } from "react";
+import { Bounce, toast } from "react-toastify";
 import SelectedContainer from "../SelectedContainer/SelectedContainer";
 import Technologies from "../Technologies/Technologies";
 import type { Technology } from "../type/type";
@@ -12,9 +13,59 @@ const TechnologiesContainer = ({
   technologyResponse,
 }: TechnologiesContainerProps) => {
   const technologiesData = use(technologyResponse);
-
+  // set all technologies to state
   const [technologies, setTechnologies] =
     useState<Technology[]>(technologiesData);
+  // store selected
+  const [selected, setSelected] = useState<Technology[]>([]);
+
+  // handle add technology
+  const handleAddSelectedTechnology = (technology: Technology): void => {
+    // check is it containe in selected or not
+    const result = selected.filter((tech) => tech.id === technology.id);
+    if (result.length === 0) {
+      // add to selected
+      setSelected([...selected, technology]);
+
+      // update isSelected property
+      const updatedTechnologies = technologies.map((tech) => {
+        if (tech.id === technology.id) {
+          return {
+            ...tech,
+            isSelected: true,
+          };
+        }
+        return tech;
+      });
+      setTechnologies(updatedTechnologies);
+      // show successfull message
+      toast.success(`Successfully Added ${technology.name} Technology.`, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    } else {
+      // showing already exist
+      toast.error(`${technology.name} already added!`, {
+        position: "bottom-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+    }
+  };
+  console.log(selected);
   return (
     <section className="border-2 mb-20">
       <div className=" technologies_container">
@@ -30,7 +81,10 @@ const TechnologiesContainer = ({
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-5">
         <div className="lg:col-span-9 md:col-span-9">
-          <Technologies technologies={technologies} />
+          <Technologies
+            technologies={technologies}
+            handleAddSelectedTechnology={handleAddSelectedTechnology}
+          />
         </div>
         <div className="lg:col-span-3 md:col-span-3">
           <SelectedContainer />

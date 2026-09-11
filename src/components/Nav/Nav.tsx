@@ -27,7 +27,7 @@ const Nav = () => {
       </div>
       <div className="flex items-center gap-5">
         <button className="font-medium block cursor-pointer">Sign In</button>
-        <button className="bg-[#D91B7E] px-5 block py-2 rounded-md text-white font-semibold border border-[#D91B7E] hover:bg-white hover:text-[#D91B7E] transition duration-500 cursor-pointer">
+        <button className="bg-[#D91B7E] px-4 block py-2 rounded-full text-white font-semibold border border-[#D91B7E] hover:bg-white hover:text-[#D91B7E] transition duration-500 cursor-pointer">
           Sign Up
         </button>
       </div>

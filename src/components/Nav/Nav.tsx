@@ -25,9 +25,9 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-2 lg:gap-5 md:gap-5 text-[12px] md:text-[15px] lg:text-[15px]">
         <button className="font-medium block cursor-pointer">Sign In</button>
-        <button className="bg-[#D91B7E] px-4 block py-2 rounded-full text-white font-semibold border border-[#D91B7E] hover:bg-white hover:text-[#D91B7E] transition duration-500 cursor-pointer">
+        <button className="bg-[#D91B7E] px-3 py-1 lg:px-4 md:px-4 block lg:py md:py-2 md:rounded-full lg:rounded-full rounded-xl text-white font-semibold border border-[#D91B7E] hover:bg-white hover:text-[#D91B7E] transition duration-500 cursor-pointer">
           Sign Up
         </button>
       </div>

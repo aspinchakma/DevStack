@@ -1,4 +1,5 @@
 import bannerImg from "../../assets/banner-stack.png";
+import { brandGradient } from "../../CommonColor/colorGradient";
 import "./Hero.css";
 const Hero = () => {
   return (
@@ -7,7 +8,9 @@ const Hero = () => {
         <h1 className=" md:text-5xl text-3xl text-center lg:text-left md:text-left lg:text-6xl font-extrabold">
           Build Your Ideal
         </h1>
-        <h1 className="text-3xl md:text-5xl text-center lg:text-left md:text-left lg:text-6xl font-extrabold bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent mt-2">
+        <h1
+          className={`text-3xl md:text-5xl text-center lg:text-left md:text-left lg:text-6xl font-extrabold bg-clip-text text-transparent mt-2 ${brandGradient}`}
+        >
           Development Stack
         </h1>
         <p className="mt-5 mb-7 leading-8 text-[#475569]">

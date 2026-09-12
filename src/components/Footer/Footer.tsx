@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden lg:block md:block md:col-span-4 ">
+        <div className="hidden lg:col-span-1 lg:block md:block md:col-span-4 ">
           <h3 className="font-bold text-[15px] ">PRODUCT</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>
@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:block lg:block md:col-span-4">
+        <div className="hidden lg:col-span-1 md:block lg:block md:col-span-4">
           <h3 className="font-bold text-[15px]">COMPANY</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>
@@ -67,7 +67,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden md:block lg:block md:col-span-4">
+        <div className="hidden md:block lg:col-span-1 lg:block md:col-span-4">
           <h3 className="font-bold text-[15px]">LEGAL</h3>
           <ul className="text-[#4b5563] mt-3 leading-8 text-[15px]">
             <li>

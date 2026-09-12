@@ -1,5 +1,6 @@
 import { use, useState } from "react";
 import { Bounce, toast } from "react-toastify";
+import { brandGradient } from "../../CommonColor/colorGradient";
 import SelectedContainer from "../SelectedContainer/SelectedContainer";
 import Technologies from "../Technologies/Technologies";
 import type { Technology } from "../type/type";
@@ -119,7 +120,7 @@ const TechnologiesContainer = ({
       <div className=" technologies_container">
         <h2 className="text-3xl lg:text-4xl text-center lg:text-left font-extrabold ">
           Explore the{" "}
-          <span className="bg-gradient-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">
+          <span className={`bg-clip-text text-transparent ${brandGradient}`}>
             Technologies
           </span>
         </h2>

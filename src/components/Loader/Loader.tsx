@@ -11,8 +11,8 @@ const Loader = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-5">
         <div className="lg:col-span-9 md:col-span-9">
           <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-5">
-            {number.map((ele, indx) => (
-              <Skeleton key={indx} />
+            {number.map((ele, idx) => (
+              <Skeleton key={`${ele}${idx}`} />
             ))}
           </div>
         </div>

@@ -4,6 +4,10 @@
 
 ---
 
+## Live Demo
+
+🚀 [View Live Project](https://devstack2026.netlify.app/)
+
 ## Technologies Used
 
 - React
